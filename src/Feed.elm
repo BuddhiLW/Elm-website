@@ -48,6 +48,17 @@ generate { siteTagline, siteUrl } siteMetadata =
         , siteUrl = siteUrl
         }
 
+-- -- generate { siteTagline, siteUrl } siteMetadata =
+--     Rss.generate
+--         { title = "elm-pages Insta-fake"
+--         , description = siteTagline
+--         , url = "https://elm-pages.com/projeto-instragram"
+--         , lastBuildTime = Pages.builtAt
+--         , generator = Just "elm-pages"
+--         , items = siteMetadata |> List.filterMap metadataToRssItem
+--         , siteUrl = siteUrl
+--         }
+
 
 metadataToRssItem :
     { path : PagePath Pages.PathKey

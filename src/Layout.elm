@@ -74,13 +74,37 @@ header currentPath =
                 , label =
                     Element.row [ Font.size 30, Element.spacing 16 ]
                         [ DocumentSvg.view
-                        , Element.text "elm-pages-starter"
+                        , Element.text "Dark (cyber) corner."
                         ]
                 }
+            , Element.row [ Element.spacing 15 ]
+                [ Element.link []
+                    { url = "/"
+                    , label =
+                        Element.row [ Font.size 20, Element.spacing 5 ]
+                            [ globozilLink
+                            , Element.text "Globozil"
+                            ]
+                    }
+                , Element.link []
+                    { url = "/"
+                    , label =
+                        Element.row [ Font.size 20, Element.spacing 5 ]
+                            [ instafakeLink
+                            , Element.text "Instafake"
+                            ]
+                    }
+
+                -- , instafakeLink
+                -- , highlightableLink currentPath Pages.pages.blog.directory "Globozil"
+                -- , highlightableLink currentPath Pages.pages.blog.directory "Insta-fake"
+                ]
             , Element.row [ Element.spacing 15 ]
                 [ elmDocsLink
                 , githubRepoLink
                 , highlightableLink currentPath Pages.pages.blog.directory "Blog"
+
+                -- , highlightableLink currentPath Pages.pages.blog.directory "Insta-fake"
                 ]
             ]
         ]
@@ -113,13 +137,39 @@ highlightableLink currentPath linkDirectory displayName =
 githubRepoLink : Element msg
 githubRepoLink =
     Element.newTabLink []
-        { url = "https://github.com/dillonkearns/elm-pages"
+        { url = "https://github.com/BuddhiLW"
         , label =
             Element.image
                 [ Element.width (Element.px 22)
                 , Font.color Palette.color.primary
                 ]
                 { src = ImagePath.toString Pages.images.github, description = "Github repo" }
+        }
+
+
+globozilLink : Element msg
+globozilLink =
+    Element.newTabLink []
+        { url = "/"
+        , label =
+            Element.image
+                [ Element.width (Element.px 22)
+                , Font.color Palette.color.primary
+                ]
+                { src = ImagePath.toString Pages.images.globozil, description = "Fake Globo" }
+        }
+
+
+instafakeLink : Element msg
+instafakeLink =
+    Element.newTabLink []
+        { url = "https://github.com/BuddhiLW"
+        , label =
+            Element.image
+                [ Element.width (Element.px 22)
+                , Font.color Palette.color.primary
+                ]
+                { src = ImagePath.toString Pages.images.instafake, description = "Fake Globo" }
         }
 
 
