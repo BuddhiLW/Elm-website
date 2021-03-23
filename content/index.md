@@ -21,8 +21,10 @@ Here you will find discussions about an infinity array of subjects:
 - mathematics,
 - etc.
 
-## Nessas secçõe você pode acessar meu blog, git, ou documentação do pacote que utilizei para gerar esse site
+## Nessas secções você pode acessar meu blog, git, ou documentação do pacote que utilizei para gerar esse site
 ### On these sections you can access my github, blog of the package documentation for this site's architecture.
+
+# Lorem Ipsum
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ante risus. Duis accumsan nibh tellus, sit amet auctor nulla faucibus sed. Aenean porta vulputate venenatis. Quisque fringilla semper enim quis aliquam. Nulla rutrum commodo ex in viverra. Sed tristique ac enim quis fermentum. Aenean aliquet tempus dui, in auctor libero feugiat non. Pellentesque pulvinar malesuada magna at pretium. Vivamus molestie ultrices sagittis.
 
