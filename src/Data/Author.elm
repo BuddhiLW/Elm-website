@@ -21,6 +21,10 @@ all =
       , avatar = Pages.images.author.dillon
       , bio = "Elm developer and educator. Founder of Incremental Elm Consulting."
       }
+    , { name = "Branquinho"
+      , avatar = Pages.images.author.branquinho
+      , bio = "Bootcamper"
+      }
     ]
 
 
@@ -41,7 +45,7 @@ decoder =
 view : List (Element.Attribute msg) -> Author -> Element msg
 view attributes author =
     Element.image
-        (Element.width (Element.px 70)
+        (Element.width (Element.px 150)
             :: Element.htmlAttribute (Attr.class "avatar")
             :: attributes
         )
