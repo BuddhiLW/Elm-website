@@ -6,6 +6,7 @@
 	"description" : "Algumas das minhas anotações de Hardcoding",
 	"image": "images/article-covers/doorofperception.jpg",
 	"published": "2021-03-23",
+	"draft": "true"
 }
 ---
 # Something
@@ -55,31 +56,31 @@ Usaremos:
 {{< figure src="./../../images/article-covers/doorofperception.jpg" >}}
 
 
-<!-- ### Pedrão Aula 2 {#pedrão-aula-2} -->
+### Pedrão Aula 2 {#pedrão-aula-2}
 
 
-<!-- #### CSS {#css} -->
+#### CSS {#css}
 
-<!-- ```css -->
-<!-- .titulo { -->
-<!--     font-weight: bold; -->
-<!--     color: gray; -->
-<!-- } -->
+```css
+.titulo {
+    font-weight: bold;
+    color: gray;
+}
 
-<!-- .subtitulo{ -->
-<!--     color: darkblue; -->
-<!-- } -->
-<!-- h1 { -->
-<!--     color: #A3A100; -->
-<!-- } -->
-<!-- ``` -->
+.subtitulo{
+    color: darkblue;
+}
+h1 {
+    color: #A3A100;
+}
+```
 
-<!-- -   Usar "reset CSS" -> [Meyer Reset CSS](https://meyerweb.com/eric/tools/css/reset/) -->
+-   Usar "reset CSS" -> [Meyer Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
 
 
-<!-- #### HTML {#html} -->
+#### HTML {#html}
 
-<!-- ```html -->
+```html
 <!-- <!DOCTYPE html> -->
 <!-- <html lang="en"> -->
 <!--   <head> -->
@@ -158,18 +159,18 @@ Usaremos:
 <!--       </body> -->
 <!--     </html> -->
 
-<!--     ``` -->
+    ```
 
-<!--     -   alt/title -> contexto de imagem para mecanismos de procura -->
+    -   alt/title -> contexto de imagem para mecanismos de procura
 
 
-<!-- #### Segundo exercício {#segundo-exercício} -->
+#### Segundo exercício {#segundo-exercício}
 
-<!-- <\!--list-separator-\-> -->
+<!--list-separator-->
 
-<!-- -  CSS -->
+-  CSS
 
-<!--     ```css -->
+    ```css
 <!--     body { -->
 <!--         background: #fafafa; -->
 <!--     } -->
@@ -268,11 +269,11 @@ Usaremos:
 <!--     } -->
 <!--     ``` -->
 
-<!-- <\!--list-separator-\-> -->
+<!--list-separator-->
 
-<!-- -  HTML -->
+-  HTML
 
-<!--     ```html -->
+    ```html
 <!--     <!DOCTYPE html> -->
 <!--     <html> -->
 <!--       <head> -->
@@ -284,7 +285,7 @@ Usaremos:
 <!--         <button>Não sou funcionária da assembleia!</button> -->
 <!--       </body> -->
 <!--     </html> -->
-<!--     ``` -->
+<!--     ```
 
 
 <!-- ### Pedrão Aula 3 {#pedrão-aula-3} -->
