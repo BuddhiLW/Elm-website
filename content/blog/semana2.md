@@ -11,16 +11,16 @@
 
 # Table of Contents
 
-1.  [Minha semana,](#orgabad9f7)
-2.  [Using emacs-lisp code to automatically tangle the written source-blocks to actual files .css and .html.](#org532b2be)
-3.  [Creating html and css in orgmode-file and previewing it.](#orgb749298)
-    1.  [CSS](#org127fc17)
-    2.  [HTML](#org893a535)
-    3.  [Here is my preview:](#orgc73e27d)
+1.  [Minha semana,](#org2b18d51)
+2.  [Using emacs-lisp code to automatically tangle the written source-blocks to actual files .css and .html.](#orgf41e155)
+3.  [Creating html and css in orgmode-file and previewing it.](#org181b3a4)
+    1.  [CSS](#orgffabea4)
+    2.  [HTML](#org32cf751)
+    3.  [Here is my preview:](#orge79509e)
 
 
 
-<a id="orgabad9f7"></a>
+<a id="org2b18d51"></a>
 
 # Minha semana,
 
@@ -33,10 +33,24 @@ Os próximos passos são:
 -   Avançar mais duas aulas de Mandarim.
 -   Linkar meu site aos trabalhos do bootcamp (disponíveis na navigation bar).
 
+Algumas coisas maneira que podem ser feitas com CSS, no presente.
+
+Com Bulma:
+
+<button class="button is-loading">
+  Loading button
+</button>
+
+![img](./button.gif)
+
+Com elocubrações (não tente isso em casa):
+
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
 Agora, um pouco do que fiz no emacs para gerar html e css, bem como a habilidade de preview, usando [ob-browser](https://github.com/krisajenkins/ob-browser).
 
 
-<a id="org532b2be"></a>
+<a id="orgf41e155"></a>
 
 # Using emacs-lisp code to automatically tangle the written source-blocks to actual files .css and .html.
 
@@ -53,14 +67,14 @@ Agora, um pouco do que fiz no emacs para gerar html e css, bem como a habilidade
     (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'efs/org-babel-tangle-config-local)))
 
 
-<a id="orgb749298"></a>
+<a id="org181b3a4"></a>
 
 # Creating html and css in orgmode-file and previewing it.
 
 Criando o html e css, dentro desse arquivo org, para preview.
 
 
-<a id="org127fc17"></a>
+<a id="orgffabea4"></a>
 
 ## CSS
 
@@ -75,7 +89,7 @@ Criando o html e css, dentro desse arquivo org, para preview.
     }
 
 
-<a id="org893a535"></a>
+<a id="org32cf751"></a>
 
 ## HTML
 
@@ -95,10 +109,10 @@ Criando o html e css, dentro desse arquivo org, para preview.
       </body>
     </html>
 
-![img](demo.png)
+<!-- ![img](demo.png) -->
 
 
-<a id="orgc73e27d"></a>
+<a id="orge79509e"></a>
 
 ## Here is my preview:
 
