@@ -1,5 +1,7 @@
 module Main exposing (main)
 
+-- add html parser
+
 import Color
 import Data.Author as Author
 import Date
@@ -9,6 +11,7 @@ import Feed
 import Head
 import Head.Seo as Seo
 import Html exposing (Html)
+import Html.Parser
 import Index
 import Json.Decode
 import Layout
@@ -78,7 +81,8 @@ generateFiles :
     ->
         StaticHttp.Request
             (List
-                (Result String
+                (Result
+                    String
                     { path : List String
                     , content : String
                     }
@@ -110,6 +114,31 @@ markdownDocument =
     }
 
 
+
+-- htmlDocument : { extension : String, metadata : Json.Decode.Decoder Metadata, body : String -> Result error (Element msg) }
+
+
+htmlDocument =
+    { extension = "html"
+
+    -- , metadata = Metadata.decoder
+    , body =
+        \htmlBody ->
+            Html.Parser.run text htmlBody
+
+    -- Html.div [] [ Markdown.toHtml [] markdownBody ]
+    --     Markdown.Parser.parse markdownBody
+    --         |> Result.withDefault []
+    --         |> Markdown.Renderer.render Markdown.Renderer.defaultHtmlRenderer
+    --         |> Result.withDefault [ Html.text "" ]
+    --         |> Html.div []
+    --         |> Element.html
+    --         |> List.singleton
+    --         |> Element.paragraph [ Element.width Element.fill ]
+    --         |> Ok
+    }
+
+
 type alias Model =
     {}
 
@@ -130,7 +159,10 @@ update msg model =
             ( model, Cmd.none )
 
 
+
 --subscriptions : Model -> Sub Msg
+
+
 subscriptions _ _ _ =
     Sub.none
 
@@ -187,7 +219,7 @@ pageView model siteMetadata page viewForPage =
             }
 
         Metadata.BlogIndex ->
-            { title = "elm-pages blog"
+            { title = "BuddhiLW Blog"
             , body =
                 [ Element.column [ Element.padding 20, Element.centerX ] [ Index.view siteMetadata ]
                 ]
@@ -234,7 +266,7 @@ head metadata =
                 Metadata.Article meta ->
                     Seo.summaryLarge
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages starter"
+                        , siteName = "BuddhiLW knowledge"
                         , image =
                             { url = meta.image
                             , alt = meta.description
@@ -300,7 +332,7 @@ head metadata =
                             }
                         , description = siteTagline
                         , locale = Nothing
-                        , title = "elm-pages blog"
+                        , title = "buddhilw blog"
                         }
                         |> Seo.website
            )
@@ -308,7 +340,7 @@ head metadata =
 
 canonicalSiteUrl : String
 canonicalSiteUrl =
-    "https://buddhilw-elm.netlify.com"
+    "https://buddhi-elm.netlify.app/"
 
 
 siteTagline : String

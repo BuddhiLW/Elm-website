@@ -1,5 +1,10 @@
 module Layout exposing (view)
 
+-- import Works
+-- import Works.Directory as WorkDirectory exposing (WorkDirectory)
+-- import Works.ImagePath as WorksImagePath
+-- import Works.PagePath as WorkPath exposing (WorkPath)
+
 import DocumentSvg
 import Element exposing (Element)
 import Element.Background
@@ -102,7 +107,7 @@ header currentPath =
             , Element.row [ Element.spacing 15 ]
                 [ elmDocsLink
                 , githubRepoLink
-                , highlightableLink currentPath Pages.pages.blog.directory "Blog"
+                , highlightableLink currentPath Pages.pages.blog.directory "Blogg"
 
                 -- , highlightableLink currentPath Pages.pages.blog.directory "Insta-fake"
                 ]
@@ -169,7 +174,7 @@ instafakeLink =
                 [ Element.width (Element.px 22)
                 , Font.color Palette.color.primary
                 ]
-                { src = ImagePath.toString Pages.images.instafake, description = "Fake Globo" }
+                { src = ImagePath.toString Pages.images.instafake, description = "Fake Instagram" }
         }
 
 

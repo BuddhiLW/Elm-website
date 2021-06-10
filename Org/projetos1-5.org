@@ -1,0 +1,4 @@
+* Nowadays my life has been a real rush
+I don't know when I will get to properly rest. And, I don't even know if I really want to.
+
+On one month and a week of  Responde Aí's Boot Camp, we have done so much. And, I have decided, on my second week, I would do only *functional style* JavaScript.
